@@ -1,0 +1,129 @@
+/* Border styles */
+html {
+    background: #c5b0e3;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#table-4 thead,
+#table-4 tr {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(211, 202, 221);
+}
+
+
+#table-4 {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(211, 202, 221);
+}
+
+/* Padding and font style */
+#table-4 td,
+#table-4 th {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-family: Verdana;
+    color: rgb(95, 74, 121);
+}
+
+/* Alternating background colors */
+#table-4 tr:nth-child(even) {
+    background: rgb(223, 216, 232);
+}
+
+#table-4 tr:nth-child(odd) {
+    background: #FFF;
+}
+
+table {
+    width: 100%;
+    margin: 1px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#table_div {
+    padding: 1% 5%;
+    background: #FFF;
+    border: solid #FFF;
+    border-radius: 6px;
+    margin: 1% 10%;
+}
+
+#search-bar_div {
+    margin: 1% 10%;
+}
+
+.search-bar {
+    padding: 5px;
+    width: 100%;
+    border: rgb(95, 74, 121) solid 1px;
+    border-radius: 6px;
+    outline: none;
+    background-color: rgb(223, 216, 232);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.search-bar:focus {
+    background-color: #ffffff;
+}
+
+#container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#button_div {
+    display: flex;
+    /* 水平置中 */
+    justify-content: center;
+    margin: 1% 10%;
+    padding: 5%;
+    border: rgb(95, 74, 121) solid 3px;
+    border-radius: 6px;
+}
+
+#button_div button {
+    margin: 1% 2.5%;
+    width: 30%;
+    border: rgb(95, 74, 121) solid 0px;
+    border-radius: 6px;
+}
+
+.intro_p {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.intro_p_s {
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+}
+
+#img_div {
+    display: flex;
+    /* 水平置中 */
+    justify-content: center;
+    margin: 1% 10%;
+    padding: 1%;
+}
+
+img {
+    width: 100px;
+}
