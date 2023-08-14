@@ -2,26 +2,31 @@
     {
         "name": "song1",
         "subject": "hsiuter",
-        "scores": "中文"
+        "scores": "中文",
+        "ps": "100sc"
     },
     {
         "name": "song2",
         "subject": "hsiuter",
-        "scores": "中文"
+        "scores": "中文",
+        "ps": ""
     },
     {
         "name": "song3",
         "subject": "hsiuter",
-        "scores": "中文"
+        "scores": "中文",
+        "ps": ""
     },
     {
         "name": "song4",
         "subject": "hsiuter",
-        "scores": "日文"
+        "scores": "日文",
+        "ps": "100sc"
     },
     {
         "name": "song5",
         "subject": "hsiuter",
-        "scores": "英文"
+        "scores": "英文",
+        "ps": ""
     }
 ]
