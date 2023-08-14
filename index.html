@@ -124,15 +124,24 @@
                         var td = document.createElement('td');
                         if (k == "name") {
                             td.innerHTML = "<a class='copy' onclick='copy(this)' href='javascript:;' >" + song[k] + "</a>";
-                        } else {
+                        } else if (k == "ps") {
+                            var td = document.createElement('td');
+                            if (song[k] == "") {
+                                td.innerHTML = " ";
+                                tr.appendChild(td);
+                            } else {
+                                td.innerHTML = song[k];
+                                tr.appendChild(td);
+                            }
+                        }
+                        else {
                             td.innerHTML = song[k];
                         }
                         tr.appendChild(td);
+
                     }
 
-                    var td = document.createElement('td');
-                    td.innerHTML = "<a href='javascript:;'>删除</a>";
-                    tr.appendChild(td);
+
                 });
             }
 
