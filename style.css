@@ -9,7 +9,8 @@ html {
 
 html::-webkit-scrollbar {
     width: 10px;
-    overflow-y: scroll
+    overflow-y: scroll;
+    background: #c5b0e3;
 }
 
 html::-webkit-scrollbar-track {
