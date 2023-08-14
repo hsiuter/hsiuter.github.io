@@ -42,14 +42,14 @@ body {
 
 #table-4 thead,
 #table-4 tr {
-    border-top-width: 1px;
-    border-top-style: solid;
+    /* border-top-width: 1px;
+    border-top-style: solid; */
     border-top-color: rgb(211, 202, 221);
 }
 
 
 #table-4 {
-    border-bottom-width: 1px;
+    border-bottom-width: 3px;
     border-bottom-style: solid;
     border-bottom-color: rgb(211, 202, 221);
 }
