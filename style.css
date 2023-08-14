@@ -13,17 +13,17 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-    background: rgb(179, 177, 177);
+    background: #c5b0e3;
     border-radius: 10px;
 }
 
 html::-webkit-scrollbar-thumb {
-    background: rgb(136, 136, 136);
+    background: #c5b0e3;
     border-radius: 10px;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-    background: rgb(100, 100, 100);
+    background: #c5b0e3;
     border-radius: 10px;
 }
 
