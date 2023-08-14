@@ -64,7 +64,7 @@
     </div>
 
     &emsp;&emsp;
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
         // 1.将每一行的数据作为一个对象，然后将这些对象封装在一个数组中（没有后台服务器的情况下，暂时采用这种方式添加）
 
@@ -215,6 +215,70 @@
             document.execCommand('copy', false);
             inp.remove();
         }
+
+        const colorButton_c = document.getElementById('chineseBtn');
+        const colorButton_e = document.getElementById('englishBtn');
+        const colorButton_j = document.getElementById('japaneseBtn');
+        const colors = ['#dfd8e8', '#5f4a79',]; // 可以自定义颜色列表
+
+        let chineseBtn_state = 0;
+        let englishBtn_state = 0;
+        let japaneseBtn_state = 0;
+
+        colorButton_c.addEventListener('click', () => {
+            if (chineseBtn_state == 0) {
+                colorButton_c.style.backgroundColor = '#5f4a79';
+                colorButton_c.style.color = '#ffffff';
+                chineseBtn_state = 1;
+                englishBtn_state = 0;
+                japaneseBtn_state = 0;
+                colorButton_e.style.backgroundColor = '#dfd8e8';
+                colorButton_e.style.color = '#000000';
+                colorButton_j.style.backgroundColor = '#dfd8e8';
+                colorButton_j.style.color = '#000000';
+            } else {
+                colorButton_c.style.backgroundColor = '#dfd8e8';
+                colorButton_c.style.color = '#000000';
+                chineseBtn_state = 0;
+            };
+
+        });
+        colorButton_e.addEventListener('click', () => {
+            if (englishBtn_state == 0) {
+                colorButton_e.style.backgroundColor = '#5f4a79';
+                colorButton_e.style.color = '#dfd8e8';
+                chineseBtn_state = 0;
+                englishBtn_state = 1;
+                japaneseBtn_state = 0;
+                colorButton_c.style.backgroundColor = '#dfd8e8';
+                colorButton_c.style.color = '#000000';
+                colorButton_j.style.backgroundColor = '#dfd8e8';
+                colorButton_j.style.color = '#000000';
+            } else {
+                colorButton_e.style.backgroundColor = '#dfd8e8';
+                colorButton_e.style.color = '#000000';
+                englishBtn_state = 0;
+            };
+
+        });
+        colorButton_j.addEventListener('click', () => {
+            if (japaneseBtn_state == 0) {
+                colorButton_j.style.backgroundColor = '#5f4a79';
+                colorButton_j.style.color = '#dfd8e8';
+                chineseBtn_state = 0;
+                englishBtn_state = 0;
+                japaneseBtn_state = 1;
+                colorButton_c.style.backgroundColor = '#dfd8e8';
+                colorButton_c.style.color = '#000000';
+                colorButton_e.style.backgroundColor = '#dfd8e8';
+                colorButton_e.style.color = '#000000';
+            } else {
+                colorButton_j.style.backgroundColor = '#dfd8e8';
+                colorButton_j.style.color = '#000000';
+                japaneseBtn_state = 0;
+            };
+
+        });
     </script>
 </body>
 
