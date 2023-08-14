@@ -170,3 +170,11 @@ button {
     top: 0;
     left: 0;
 }
+
+.copy:hover,
+.copy:visited,
+.copy:link,
+.copy:active {
+    text-decoration: none;
+    color: rgb(95, 74, 121);
+}
