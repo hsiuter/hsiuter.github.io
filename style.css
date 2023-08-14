@@ -105,12 +105,14 @@ table {
     width: 30%;
     border: rgb(95, 74, 121) solid 0px;
     border-radius: 20px;
+    background-color: #dfd8e8;
 }
 
 button {
     font-size: 20px;
     padding: 0.5% 5%;
 }
+
 
 .intro_p {
     width: 100%;
