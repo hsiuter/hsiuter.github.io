@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>栗安LiAN的歌单</title>
     <!-- <style>
         table {
             width: 500px;
@@ -29,7 +29,7 @@
 
 <body>
     <a href="https://live.bilibili.com/27895178?live_from=85001&spm_id_from=444.41.live_users.item.click">
-        <img id="live_streaming_img" src="./test.jpg" alt="">
+        <img id="live_streaming_img" src="./bilibili_logo_padded.png" alt="">
     </a>
     <div id="container">
         <div id="img_div">
@@ -62,9 +62,13 @@
             </table>
         </div>
     </div>
+    <div id="particles-js">
+
+    </div>
 
     &emsp;&emsp;
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script>
         // 1.将每一行的数据作为一个对象，然后将这些对象封装在一个数组中（没有后台服务器的情况下，暂时采用这种方式添加）
 
@@ -293,6 +297,116 @@
                 japaneseBtn_state = 0;
             };
 
+        });
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"]
+                },
+                shape: {
+                    type: ["circle"],
+                    stroke: {
+                        width: 0,
+                        color: "#fff"
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    },
+                    image: {
+                        src: "https://cdn.freebiesupply.com/logos/large/2x/slack-logo-icon.png",
+                        width: 100,
+                        height: 100
+                    }
+                },
+                opacity: {
+                    value: 1,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 8,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 10,
+                        size_min: 10,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#808080",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 5,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
         });
     </script>
 </body>
