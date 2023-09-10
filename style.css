@@ -261,6 +261,13 @@ button {
     left: 0;
 }
 
+#gif {
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 
 .copy:visited,
 .copy:link,
