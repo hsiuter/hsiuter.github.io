@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -27,7 +28,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body oncontextmenu="return false;" ondragstart="return false;">
     <a href="https://live.bilibili.com/27895178?live_from=85001&spm_id_from=444.41.live_users.item.click">
         <img id="live_streaming_img" src="./bilibili_logo_padded.png" alt="">
     </a>
@@ -80,6 +81,7 @@
     &emsp;&emsp;
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./script.js"></script>
     <script>
         // 1.将每一行的数据作为一个对象，然后将这些对象封装在一个数组中（没有后台服务器的情况下，暂时采用这种方式添加）
 
@@ -419,6 +421,7 @@
             },
             retina_detect: true
         });
+
     </script>
 </body>
 
