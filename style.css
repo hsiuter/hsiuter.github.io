@@ -1,6 +1,6 @@
 /* Border styles */
 html {
-    background: #c5b0e3;
+    background: #392F5A;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -10,26 +10,26 @@ html {
 html::-webkit-scrollbar {
     width: 10px;
     overflow-y: scroll;
-    background: #c5b0e3;
+    background: none;
 }
 
 html::-webkit-scrollbar-track {
-    background: #c5b0e3;
+    background: none;
     border-radius: 10px;
 }
 
 html::-webkit-scrollbar-thumb {
-    background: rgb(136, 136, 136);
+    background: #392F5A;
     border-radius: 10px;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-    background: rgb(100, 100, 100);
+    background: #392F5A;
     border-radius: 10px;
 }
 
 html::-webkit-scrollbar-thumb:active {
-    background: rgb(68, 68, 68);
+    background: #392F5A;
     border-radius: 10px;
 }
 
@@ -62,7 +62,7 @@ body {
     padding: 5px 10px;
     font-size: 20px;
     font-family: Verdana;
-    color: rgb(95, 74, 121);
+    color: #392F5A;
 }
 
 /* Alternating background colors */
@@ -82,21 +82,55 @@ table {
 }
 
 #table_div {
-    padding: 1% 5%;
+    height: 60%;
+    padding: 2% 5%;
     background: #FFF;
     border: solid #FFF;
-    border-radius: 20px;
-    margin: 1% 10%;
+    border-radius: 10px;
+    margin: 1% 0%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
 }
 
+
+#table_div::-webkit-scrollbar {
+    width: 6px;
+    overflow-y: scroll;
+    background: none;
+}
+
+#table_div::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 10px;
+}
+
+#table_div::-webkit-scrollbar-thumb {
+    background: #392F5A;
+    border-radius: 10px;
+}
+
+#table_div::-webkit-scrollbar-thumb:hover {
+    background: #392F5A;
+    border-radius: 10px;
+}
+
+#table_div::-webkit-scrollbar-thumb:active {
+    background: #392F5A;
+    border-radius: 10px;
+}
+
+
 #search-bar_div {
-    margin: 1% 10%;
+    margin: 1% 0%;
 }
 
 .search-bar {
     padding: 5px;
     width: 100%;
-    border: rgb(95, 74, 121) solid 1px;
+    border: #392F5A solid 2px;
     border-radius: 20px;
     outline: none;
     background-color: rgb(223, 216, 232);
@@ -105,6 +139,7 @@ table {
     box-sizing: border-box;
     font-size: 20px;
     padding: 10px;
+    padding-left: 20px;
 }
 
 .search-bar:focus {
@@ -113,17 +148,45 @@ table {
 
 #container {
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #BEB7DFa3;
+    /* border: #BEB7DF solid 4px; */
+
+    border: 4px solid #BEB7DF;
+    /* border-radius: 3px; */
+    box-shadow: 0 1px 10px 0 #e0e5e8;
+    border-radius: 10px;
+    /* padding: 2% 0%; */
+}
+
+.flex_30 {
+    position: relative;
+    width: 30%;
+    margin-top: 2%;
+    padding-left: 2%;
+}
+
+.flex_70 {
+    position: relative;
+    width: 70%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 #button_div {
     display: flex;
     /* 水平置中 */
     justify-content: center;
-    margin: 1% 10%;
+    margin: 1% 0%;
     padding: 3% 5%;
-    border: rgb(95, 74, 121) solid 3px;
+    border: #392F5A solid 3px;
     border-radius: 20px;
 
 }
@@ -131,13 +194,19 @@ table {
 #button_div button {
     margin: 1% 2.5%;
     width: 30%;
-    border: rgb(95, 74, 121) solid 0px;
+    border: #dfd8e8 solid 2px;
     border-radius: 20px;
     background-color: #dfd8e8;
 }
 
+#button_div button:hover {
+    border: #392F5A solid 2px;
+}
+
+
 button {
     font-size: 20px;
+    font-weight: 900;
     padding: 0.5% 5%;
 }
 
@@ -146,24 +215,26 @@ button {
     width: 100%;
     text-align: center;
     font-size: 30px;
+    margin: 3% 0;
 }
 
 .intro_p_s {
     width: 100%;
     text-align: center;
     font-size: 20px;
+    margin: 3% 0;
 }
 
 #img_div {
     display: flex;
     /* 水平置中 */
     justify-content: center;
-    margin: 1% 10%;
+    margin: 1% 1%;
     padding: 1%;
 }
 
 #intro_img {
-    width: 200px;
+    width: 100%;
 }
 
 #live_streaming_img {
@@ -173,12 +244,16 @@ button {
     left: 0;
 }
 
-.copy:hover,
+
 .copy:visited,
 .copy:link,
 .copy:active {
     text-decoration: none;
-    color: rgb(95, 74, 121);
+    color: #392F5A;
+}
+
+.copy:hover {
+    color: #c1a6cd;
 }
 
 #particles-js {
@@ -186,5 +261,10 @@ button {
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 0;
+    z-index: -1;
+}
+
+#flex {
+    display: flex;
+    /* z-index: 3; */
 }
