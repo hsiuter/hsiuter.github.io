@@ -31,35 +31,43 @@
     <a href="https://live.bilibili.com/27895178?live_from=85001&spm_id_from=444.41.live_users.item.click">
         <img id="live_streaming_img" src="./bilibili_logo_padded.png" alt="">
     </a>
-    <div id="container">
-        <div id="img_div">
-            <img id="intro_img" src="./test.jpg" alt="">
-        </div>
-        <p class="intro_p">栗安LiAN</p>
-        <p class="intro_p">和她的经典神曲</p>
-        <p class="intro_p_s">点歌名复制</p>
-        <div id="button_div">
-            <button type="button" id="chineseBtn">中文</button>
-            <button type="button" id="englishBtn">英文</button>
-            <button type="button" id="japaneseBtn">日文</button>
-        </div>
-        <div id="search-bar_div">
-            <input class="search-bar" type="text" name="search" id="search" placeholder="输入歌名">
-        </div>
-        <div id="table_div">
-            <table id="table-4" cellspacing="0">
-                <thead>
-                    <tr class="test">
-                        <th>歌名</th>
-                        <th>歌手</th>
-                        <th>语言</th>
-                        <th>备注</th>
-                    </tr>
-                </thead>
-                <tbody>
+    <div id="flex">
+        <div id="container">
+            <div class="flex_30">
+                <div id="img_div">
+                    <img id="intro_img" src="./test.jpg" alt="">
+                </div>
+                <p class="intro_p">栗安LiAN</p>
+                <p class="intro_p">和她的经典神曲</p>
+                <p class="intro_p_s">点歌名复制</p>
+            </div>
 
-                </tbody>
-            </table>
+            <div class="flex_70">
+                <div id="button_div">
+                    <button type="button" id="chineseBtn" class="btn-0">中文</button>
+                    <button type="button" id="englishBtn">英文</button>
+                    <button type="button" id="japaneseBtn">日文</button>
+                </div>
+                <div id="search-bar_div">
+                    <input class="search-bar" type="text" name="search" id="search" placeholder="输入歌名">
+                </div>
+                <div id="table_div">
+                    <table id="table-4" cellspacing="0">
+                        <thead>
+                            <tr class="test">
+                                <th>歌名</th>
+                                <th>歌手</th>
+                                <th>语言</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
     <div id="particles-js">
@@ -229,7 +237,7 @@
         function copy(that) {
             var inp = document.createElement('input');
             document.body.appendChild(inp)
-            inp.value = that.textContent
+            inp.value = "点歌 " + that.textContent
             inp.select();
             document.execCommand('copy', false);
             inp.remove();
