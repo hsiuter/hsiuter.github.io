@@ -473,6 +473,7 @@ button {
         height: auto;
         margin-top: 0;
         padding: 2%;
+        padding-bottom: 0;
     }
 
     .flex_70 {
@@ -558,6 +559,7 @@ button {
 
     #intro_img {
         width: 60%;
+        max-width: 200px;
         border-radius: 50%;
     }
 
