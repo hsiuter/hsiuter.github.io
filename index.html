@@ -82,8 +82,6 @@
     </div>
 
 
-    </div>
-
     &emsp;&emsp;
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
@@ -128,92 +126,15 @@
             var datas = data;
             var tbody = document.querySelector('tbody');
             var text = "";
+            var activeLanguage = 'all';
 
-            function filterSongs() {
-                text = $('#search').val().toLowerCase(); // 获取文本框输入并转为小写
+            function updateTable() {
+                var searchText = $('#search').val().toLowerCase();
                 var filteredData = datas.filter(function (song) {
-                    return song.name.toLowerCase().includes(text);
+                    var matchesLanguage = activeLanguage === 'all' || song.scores === activeLanguage;
+                    var matchesSearch = song.name.toLowerCase().includes(searchText);
+                    return matchesLanguage && matchesSearch;
                 });
-
-                // 清空歌曲列表
-                tbody.innerHTML = '';
-
-                // 重新生成过滤后的歌曲列表
-                filteredData.forEach(function (song) {
-                    var tr = document.createElement('tr');
-                    tbody.appendChild(tr);
-
-                    for (var k in song) {
-                        var td = document.createElement('td');
-                        if (k == "name") {
-                            td.innerHTML = "<a class='copy' onclick='copy(this)' href='javascript:;' >" + song[k] + "</a>";
-                        } else if (k == "ps") {
-                            var td = document.createElement('td');
-                            if (song[k] == "") {
-                                td.innerHTML = " ";
-                                tr.appendChild(td);
-                            } else {
-                                td.innerHTML = song[k];
-                                tr.appendChild(td);
-                            }
-                        }
-                        else {
-                            td.innerHTML = song[k];
-                        }
-                        tr.appendChild(td);
-
-                    }
-
-
-                });
-            }
-
-            // 初始化页面时显示所有歌曲
-            filterSongs();
-
-            // 监听搜索栏输入事件
-            $('#search').on('input', filterSongs);
-
-
-            var chineseBtn = document.getElementById('chineseBtn');
-            var englishBtn = document.getElementById('englishBtn');
-            var japaneseBtn = document.getElementById('japaneseBtn');
-
-            chineseBtn.addEventListener('click', function () {
-                toggleButton(chineseBtn, '中文');
-            });
-
-            englishBtn.addEventListener('click', function () {
-                toggleButton(englishBtn, '英文');
-            });
-
-            japaneseBtn.addEventListener('click', function () {
-                toggleButton(japaneseBtn, '日文');
-            });
-
-            function toggleButton(button, language) {
-                if (button.classList.contains('active')) {
-                    button.classList.remove('active');
-                    filterByLanguage('all');
-                } else {
-                    chineseBtn.classList.remove('active');
-                    englishBtn.classList.remove('active');
-                    japaneseBtn.classList.remove('active');
-                    button.classList.add('active');
-                    filterByLanguage(language);
-                }
-            }
-
-            function filterByLanguage(language) {
-                var filteredData;
-
-                if (language === 'all') {
-                    filteredData = datas;
-                } else {
-                    filteredData = datas.filter(function (song) {
-                        return song.scores === language;
-                    });
-                }
 
                 // 清空歌曲列表
                 tbody.innerHTML = '';
@@ -236,14 +157,49 @@
                                 td.innerHTML = song[k];
                                 tr.appendChild(td);
                             }
-                        }
-                        else {
+                        } else {
                             td.innerHTML = song[k];
                         }
                         tr.appendChild(td);
                     }
                 });
             }
+
+            // 初始化页面时显示所有歌曲
+            updateTable();
+
+            // 监听搜索栏输入事件
+            $('#search').on('input', updateTable);
+
+            function toggleButton(button, language) {
+                if (button.classList.contains('active')) {
+                    button.classList.remove('active');
+                    activeLanguage = 'all';
+                } else {
+                    chineseBtn.classList.remove('active');
+                    englishBtn.classList.remove('active');
+                    japaneseBtn.classList.remove('active');
+                    button.classList.add('active');
+                    activeLanguage = language;
+                }
+                updateTable();
+            }
+
+            var chineseBtn = document.getElementById('chineseBtn');
+            var englishBtn = document.getElementById('englishBtn');
+            var japaneseBtn = document.getElementById('japaneseBtn');
+
+            chineseBtn.addEventListener('click', function () {
+                toggleButton(chineseBtn, '中文');
+            });
+
+            englishBtn.addEventListener('click', function () {
+                toggleButton(englishBtn, '英文');
+            });
+
+            japaneseBtn.addEventListener('click', function () {
+                toggleButton(japaneseBtn, '日文');
+            });
         });
         function copy(that) {
             var inp = document.createElement('input');
