@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body oncontextmenu="return false;" ondragstart="return false;">
+<body>
 
     <div id="fullpage">
         <div class="section">
@@ -19,7 +19,7 @@
                     栗安 LiAN Official
                 </div>
                 <div class="intro_text">
-                    2022年4月
+                    放过自己
                 </div>
             </div>
         </div>
@@ -35,6 +35,7 @@
             </ul>
         </div>
         <div class="section">
+            <a href="../index - 複製 (2).html" class="go_songlist">前往歌单</a>
             <div class="slide">
                 <div class="song-wrap">
                     <div class="song-disc">
@@ -105,6 +106,9 @@
         });
         function showSkills() {
             const skills = document.querySelectorAll('.skill');
+            skills.forEach(skill => {
+                skill.classList.remove('visible');
+            });
             skills.forEach((skill, index) => {
                 setTimeout(() => {
                     skill.classList.add('visible');
