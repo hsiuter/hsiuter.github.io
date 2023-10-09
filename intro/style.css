@@ -1,0 +1,246 @@
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.section:nth-child(1) {
+    background-color: #f2c94c;
+    background-image: url(./bg_2.jpg);
+    background-size: 105%;
+}
+
+.section:nth-child(2) {
+    background-color: #2d9cdb;
+}
+
+.section:nth-child(3) {
+    background-color: #27ae60;
+}
+
+.section:nth-child(4) {
+    background-color: #e74c3c;
+}
+
+.song__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url(images/coverblur.jpg) no-repeat center;
+    background-size: auto 100%;
+}
+
+.song__bg::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+.song-wrap {
+    padding-top: 70px;
+}
+
+.song-disc {
+    position: relative;
+    width: 296px;
+    height: 296px;
+    margin: 0 auto;
+}
+
+.song-disc__bg {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url(./disc-ip6.png) no-repeat center;
+    background-size: contain;
+}
+
+.song-disc__cover {
+    position: absolute;
+    z-index: 1;
+    width: 184px;
+    height: 184px;
+    left: 50%;
+    top: 50%;
+    margin-left: -92px;
+    margin-top: -92px;
+}
+
+.song-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.u-img {
+    width: 100%;
+}
+
+.song-img.play {
+    animation: circle 10s linear infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.play-btn {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(./play.png) no-repeat;
+    background-size: contain;
+}
+
+.play-btn.play {
+    display: none;
+}
+
+.song-needle {
+    position: absolute;
+    z-index: 3;
+    top: -70px;
+    width: 96px;
+    height: 137px;
+    left: 133px;
+    background: url(images/needle-ip6.png) no-repeat;
+    background-size: contain;
+    transform: rotate(-30deg);
+    transform-origin: left top;
+    transition: transform .5s;
+}
+
+.song-needle.play {
+    transform: rotate(0);
+}
+
+/* 调整左侧箭头的位置 */
+.fp-prev {
+    left: 50px !important;
+    /* 默认是0 */
+}
+
+/* 调整右侧箭头的位置 */
+.fp-next {
+    right: 50px !important;
+    /* 默认是0 */
+}
+
+/* fp-slidesNav fp-bottom */
+/* fp-bottom set center */
+.fp-bottom {
+    text-align: center;
+}
+
+/* intro_img 改圆形且有border */
+.intro_img {
+    width: 300px;
+    border-radius: 50%;
+    border: 5px solid #873af4;
+    /* 绝对水平居中 */
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+@keyframes glowAnimation {
+    from {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
+            0 0 10px rgba(255, 255, 255, 0.7),
+            0 0 15px rgba(255, 255, 255, 0.7);
+    }
+
+    to {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+            0 0 20px rgba(255, 255, 255, 0.9),
+            0 0 30px rgba(255, 255, 255, 0.9);
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 10%;
+    color: aliceblue;
+    font-weight: 400;
+}
+
+.intro_text {
+    margin-bottom: 1%;
+}
+
+.skill {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s;
+
+    color: aliceblue;
+    font-size: 50px;
+    list-style: none;
+    margin: 30px 0;
+    font-weight: 400;
+}
+
+.skill.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.skills-list {
+    flex-direction: column;
+    left: 15%;
+    position: relative;
+}
+
+.skill.visible:nth-child(1) {
+    transform: translateX(20px) translateX(0px);
+}
+
+.skill.visible:nth-child(2) {
+    transform: translateX(20px) translateX(15px);
+}
+
+.skill.visible:nth-child(3) {
+    transform: translateX(20px) translateX(30px);
+}
+
+.skill.visible:nth-child(4) {
+    transform: translateX(20px) translateX(45px);
+}
+
+.skill.visible:nth-child(5) {
+    transform: translateX(20px) translateX(60px);
+}
+
+.skill.visible:nth-child(6) {
+    transform: translateX(20px) translateX(75px);
+}
