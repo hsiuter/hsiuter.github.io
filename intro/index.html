@@ -4,11 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>栗安LiAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>test</div>
+
+    <div id="fullpage">
+        <div class="section">
+            <div class="intro">
+                <div><img src="./intro_1.jpg" alt="" class="intro_img"></div>
+                <div class="intro_text">
+                    栗安 LiAN Official
+                </div>
+                <div class="intro_text">
+                    2022年4月
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <ul class="skills-list">
+                <li class="skill">恶魔级地狱料理人</li>
+                <li class="skill">盆系向桶进化中</li>
+                <li class="skill">工位地缚灵</li>
+                <li class="skill">冰霜女巫</li>
+                <li class="skill">什么都势</li>
+                <li class="skill">妈妈系</li>
+                <!-- 你可以继续添加其他技能 -->
+            </ul>
+        </div>
+        <div class="section">
+            <div class="slide">
+                <div class="song-wrap">
+                    <div class="song-disc">
+                        <div class="song-disc__bg"></div>
+                        <div class="song-disc__cover">
+                            <div class="song-img">
+                                <img src="./moon.jpg" alt="" class="u-img">
+                            </div>
+                        </div>
+                        <div class="play-btn"></div>
+                        <div class="song-needle"></div>
+                        <audio class="song-audio" src="./1.mp3"></audio> <!-- 添加音频文件 -->
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="song-wrap">
+                    <div class="song-disc">
+                        <div class="song-disc__bg"></div>
+                        <div class="song-disc__cover">
+                            <div class="song-img">
+                                <img src="./moon.jpg" alt="" class="u-img">
+                            </div>
+                        </div>
+                        <div class="play-btn"></div>
+                        <div class="song-needle"></div>
+                        <audio class="song-audio" src="./1.mp3"></audio> <!-- 添加音频文件 -->
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="song-wrap">
+                    <div class="song-disc">
+                        <div class="song-disc__bg"></div>
+                        <div class="song-disc__cover">
+                            <div class="song-img">
+                                <img src="./moon.jpg" alt="" class="u-img">
+                            </div>
+                        </div>
+                        <div class="play-btn"></div>
+                        <div class="song-needle"></div>
+                        <audio class="song-audio" src="./1.mp3"></audio> <!-- 添加音频文件 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">Section 3</div>
+        <div class="section">Section 4</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            // licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+            navigation: true,
+            // other fullpage options can be added here
+            slidesNavigation: true,
+            afterLoad: function (origin, destination, direction) {
+                if (destination.index === 1) { // 第二页的索引为1
+                    showSkills();
+                }
+            },
+            onLeave: function (origin, destination, direction) {
+                if (origin.index === 1) { // 当从第二页离开时
+                    resetSkills();
+                }
+            },
+        });
+        function showSkills() {
+            const skills = document.querySelectorAll('.skill');
+            skills.forEach((skill, index) => {
+                setTimeout(() => {
+                    skill.classList.add('visible');
+                }, index * 300); // 每100毫秒显示一个技能
+            });
+        };
+        function resetSkills() {
+            const skills = document.querySelectorAll('.skill');
+            skills.forEach(skill => {
+                skill.classList.remove('visible');
+            });
+        };
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
