@@ -41,6 +41,8 @@ discs.forEach((disc, index) => {
 });
 
 $(document).ready(function () {
+    const loading = document.getElementById("loading");
+    loading.style.zIndex = "-1";
     var textWrapper = document.querySelector('.ml3');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
