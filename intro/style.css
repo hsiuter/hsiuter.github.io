@@ -339,6 +339,7 @@
 }
 
 .song_text {
+    height: 10%;
     color: aliceblue;
     font-size: 30px;
     font-weight: 400;
