@@ -7,13 +7,13 @@
 }
 
 .section:nth-child(1) {
-    background-color: #392F5A;
-    background-image: url(./bg_2.jpg);
+    background-color: #9378ea;
+    /* background-image: url(./bg_2.jpg); */
     background-size: 105%;
 }
 
 .section:nth-child(2) {
-    background-color: #2d9cdb;
+    background-color: #181c47;
 }
 
 .section:nth-child(3) {
@@ -23,6 +23,7 @@
 .section:nth-child(4) {
     background-color: #e74c3c;
 }
+
 
 .song__bg {
     position: absolute;
@@ -139,14 +140,16 @@
 
 /* 调整左侧箭头的位置 */
 .fp-prev {
-    left: 50px !important;
+    left: 38% !important;
     /* 默认是0 */
+    top: 52%;
 }
 
 /* 调整右侧箭头的位置 */
 .fp-next {
-    right: 50px !important;
+    right: 38% !important;
     /* 默认是0 */
+    top: 52%;
 }
 
 /* fp-slidesNav fp-bottom */
@@ -175,32 +178,21 @@
 }
 
 /* intro_img 改圆形且有border */
-.intro_img {
-    width: 300px;
-    border-radius: 50%;
-    border: 5px solid #873af4;
-    /* 绝对水平居中 */
+/* song_text */
+.song_topic {
     position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-
-    animation: glowAnimation 1.5s infinite alternate;
+    font-size: 8vw !important;
+    font-family: PPEN;
+    font-weight: 200;
+    color: aliceblue;
+    line-height: 1;
+    letter-spacing: -.05em;
+    top: 0.15625vw;
+    left: 4.53125vw;
 }
 
-@keyframes glowAnimation {
-    from {
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
-            0 0 10px rgba(255, 255, 255, 0.7),
-            0 0 15px rgba(255, 255, 255, 0.7);
-    }
 
-    to {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
-            0 0 20px rgba(255, 255, 255, 0.9),
-            0 0 30px rgba(255, 255, 255, 0.9);
-    }
-}
+
 
 .intro {
     display: flex;
@@ -211,22 +203,79 @@
     margin-top: 10%;
     color: aliceblue;
     font-weight: 400;
+    z-index: 100;
 }
 
-.intro_text {
-    margin-bottom: 1%;
+/* .intro_text_1 {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    font-weight: 900;
+    font-size: 100px;
+    background: linear-gradient(45deg, rgb(0, 0, 0) 82%, rgb(255, 255, 255) 18%);
+    -webkit-background-clip: text;
+    color: transparent;
+} */
+
+.intro_text_1 {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    font-size: 100px;
+    display: inline-block;
+    background:
+        radial-gradient(circle at 93% -228%, transparent 50%, rgb(0, 0, 0) 50%) no-repeat,
+        rgb(255, 255, 255);
+    background-size: 150% 150%;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text {
+    font-size: 3rem;
+    display: inline-block;
+    background: radial-gradient(circle at 50% 50%, white 40%, transparent 40%, transparent);
+    color: red;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding: 1rem;
+
+    /* 创建一个伪元素来覆盖原始的文字颜色 */
+    position: relative;
+}
+
+.text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: blue;
+    z-index: -1;
+}
+
+.intro_text_2 {
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    color: black;
+    font-size: 40px;
+    font-weight: 900;
 }
 
 .skill {
     opacity: 0;
     transform: translateX(-20px);
     transition: all 0.5s;
-
-    color: aliceblue;
-    font-size: 50px;
+    display: inline-block;
+    color: black;
+    font-size: 20px;
     list-style: none;
-    margin: 30px 0;
+    margin: 10px 10px;
     font-weight: 400;
+    white-space: nowrap;
+    /* 添加此行 */
 }
 
 .skill.visible {
@@ -235,12 +284,13 @@
 }
 
 .skills-list {
-    flex-direction: column;
-    left: 15%;
     position: relative;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
 }
 
-.skill.visible:nth-child(1) {
+/* .skill.visible:nth-child(1) {
     transform: translateX(20px) translateX(0px);
 }
 
@@ -262,7 +312,7 @@
 
 .skill.visible:nth-child(6) {
     transform: translateX(20px) translateX(75px);
-}
+} */
 
 .go_songlist {
     position: absolute;
@@ -273,4 +323,241 @@
     font-weight: 400;
     z-index: 10;
     text-decoration: none;
+}
+
+.song_text {
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    /* 绝对置中 */
+    position: absolute;
+    left: 50%;
+    top: -30%;
+    transform: translate(-50%, -50%);
+}
+
+.material-symbols-outlined {
+    font-size: 1rem;
+    margin-right: 1%;
+    font-variation-settings:
+        'FILL' 20,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+/* 卡片 */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.details,
+.live-info,
+.background-info {
+    margin-bottom: 20px;
+}
+
+.divider {
+    text-align: center;
+    margin: 10px 0;
+}
+
+p {
+    margin: 15px 0;
+}
+
+/* 卡片 */
+
+/* 主题 */
+.content {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 170px;
+}
+
+.content span {
+    width: 30px;
+    /* display: inline-block; */
+    font-family: PPNM, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    /* background-color: #222; */
+    color: #eee;
+
+}
+
+/* 主题 */
+
+/* 侧边文字 */
+#textContainer {
+    position: absolute;
+    font-family: PPNM;
+    writing-mode: vertical-rl;
+    font-size: 24px;
+    /* position: relative; */
+    left: -100%;
+    transition: left 0.3s;
+    top: 1.71875vw;
+}
+
+
+@font-face {
+    font-family: PPNM;
+    src: url("font/PPNeueMontreal-Medium.otf");
+}
+
+.hidden {
+    left: -100%;
+}
+
+.shown {
+    left: 0.46875vw !important;
+}
+
+/* 侧边文字 */
+
+/* 直线 */
+#line {
+    position: absolute;
+    left: 2.46875vw;
+    top: -60%;
+    transform: translate(-50%, -50%);
+    border: #ffffff 1px solid;
+    width: 1px;
+    height: 100%;
+    transition: top 1s ease;
+    /* 添加过渡效果，持续时间为2秒，可以根据需要调整 */
+}
+
+/* 直线 */
+
+/* 女巫 */
+#witch {
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 35%;
+    font-family: 'Noto Serif JP', serif;
+    writing-mode: vertical-rl;
+    font-size: 400px;
+    opacity: 0;
+    color: #f3d73d;
+    transition: font-size 1s ease, opacity 2s ease;
+
+}
+
+#witch_2 {
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    top: 77%;
+    font-family: 'Noto Serif JP', serif;
+    writing-mode: vertical-rl;
+    font-size: 400px;
+    opacity: 0;
+    color: #4c24e8;
+    transition: font-size 1s ease, opacity 2s ease;
+}
+
+/* 女巫 */
+
+/* 介绍 */
+.about {
+    position: absolute;
+    left: 4.53125vw;
+    top: 2.5vw;
+    /* 12.8125vw 2.5vw 3.02084vw 4.53125vw */
+    font-size: 16.66667vw;
+    font-family: PPEN;
+    font-weight: 200;
+    color: aliceblue;
+    line-height: 1;
+    letter-spacing: -.05em;
+}
+
+@font-face {
+    font-family: PPEN;
+    src: url("font/PPEditorialNew-Ultralight.otf");
+}
+
+.about_text {
+    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+    font-weight: 200;
+    font-size: 1.5vw;
+    line-height: 1.5;
+    color: aliceblue;
+}
+
+.about_text_1 {
+    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+    font-weight: 200;
+    font-size: 1.5vw;
+    line-height: 1.5;
+    color: aliceblue;
+}
+
+.about_text_2 {
+    margin-top: 7%;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1.5;
+    color: aliceblue;
+}
+
+.about_text_container {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+}
+
+.intro_img {
+    width: 30.83334vw;
+    position: absolute;
+    right: 4%;
+    top: 0%;
+    /* transform: translate(-50%, -50%); */
+}
+
+
+
+/* 介绍 */
+
+.line {
+    position: absolute;
+    left: 2.46875vw;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: #ffffff 1px solid;
+    width: 1px;
+    height: 100%;
+    transition: top 1s ease;
+    /* 添加过渡效果，持续时间为2秒，可以根据需要调整 */
+}
+
+.textContainer {
+    position: absolute;
+    font-family: PPNM;
+    writing-mode: vertical-rl;
+    font-size: 24px;
+    /* position: relative; */
+    left: 0.46875vw;
+    top: 1.71875vw;
+    color: aliceblue;
+    font-weight: 400;
 }

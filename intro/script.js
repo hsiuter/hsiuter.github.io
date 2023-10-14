@@ -39,3 +39,46 @@ discs.forEach((disc, index) => {
         playBtn.classList.remove('play');
     });
 });
+
+$(document).ready(function () {
+    var textWrapper = document.querySelector('.ml3');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    // 第一个动画
+    var firstAnimation = anime.timeline({ loop: false })
+        .add({
+            targets: '.ml3 .letter',
+            opacity: [0, 1],
+            easing: "easeInOutQuad",
+            duration: 2250,
+            delay: (el, i) => 150 * (i + 1)
+        });
+
+    // 监听第一个动画的完成事件
+    firstAnimation.finished.then(function () {
+        // 第一个动画完成后，执行第二个动画
+        const textContainer = document.getElementById("textContainer");
+        const line = document.getElementById("line");
+        const witch = document.getElementById("witch");
+        const witch_2 = document.getElementById("witch_2");
+        // Simple delay to show the second animation. You can change the delay as needed.
+        setTimeout(() => {
+            textContainer.classList.remove("hidden");
+            textContainer.classList.add("shown");
+            line.style.top = "50%";
+            witch.style.fontSize = "350px";
+            witch.style.opacity = "1";
+            witch_2.style.fontSize = "350px";
+            witch_2.style.opacity = "1";
+        }, 3500);
+    });
+});
+
+
+// // 获取要移动的元素
+// const line = document.getElementById("line");
+
+// // 使用 JavaScript 改变 top 样式属性
+// setTimeout(() => {
+//     line.style.top = "50%";
+// }, 1000); // 1秒后开始动画，可以根据需要调整延迟时间

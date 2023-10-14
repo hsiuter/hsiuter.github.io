@@ -6,39 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>栗安LiAN</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
 </head>
 
 <body oncontextmenu="return false;" ondragstart="return false;">
     <div id="fullpage">
         <div class="section">
             <div class="intro">
-                <div><img src="./intro_1.jpg" alt="" class="intro_img"></div>
-                <div class="intro_text">
-                    栗安 LiAN Official
+                <div id="line"></div>
+                <div id="textContainer" class="hidden">
+                    LiAN OFFICIAL
                 </div>
-                <div class="intro_text">
-                    放过自己
+                <div id="witch">
+                    女巫
                 </div>
+                <div id="witch_2">
+                    魔女
+                </div>
+                <!-- <div><img src="./intro_1.jpg" alt="" class="intro_img"></div> -->
+                <div class="container">
+                    <div class="content">
+                        <div class="ml3">栗安 X LiAN OFFICIAL</div>
+                    </div>
+                </div>
+                <!-- <div class="intro_text_2">
+                    放过自己！放过自己！<br>
+                    放过自己！放过自己！放过自己！<br>
+                    放过！放过！放过！<br>
+                    开玩笑的！
+                </div> -->
+
+                <!-- <div class="split-color-text">你好世界!</div> -->
             </div>
+
         </div>
         <div class="section">
-            <ul class="skills-list">
-                <li class="skill">恶魔级地狱料理人</li>
-                <li class="skill">盆系向桶进化中</li>
-                <li class="skill">工位地缚灵</li>
-                <li class="skill">冰霜女巫</li>
-                <li class="skill">什么都势</li>
-                <li class="skill">妈妈系</li>
-                <!-- 你可以继续添加其他技能 -->
-            </ul>
+            <!-- <div id="line"></div>
+            <div id="textContainer" class="hidden">
+                LiAN OFFICIAL
+            </div> -->
+            <div class="line"></div>
+            <div class="textContainer">
+                LiAN OFFICIAL
+            </div>
+            <div class="about">ABOUT</div>
+            <div class="about_text_container">
+                <div class="about_text">
+                    名字：栗安LiAN 性别：女
+                </div>
+                <div class="about_text_1">
+                    年龄：秘密/身高：155/职业：女巫/兴趣：唱歌、吃肉肉、和美少女贴贴
+                </div>
+                <div class="about_text_2">
+                    直播时间：通常每晚九点开播，白天随机掉落（具体请见周表）<br>
+                    直播内容：杂谈、画画、唱歌、单机游戏
+                    <br><br>
+                    角色背景：我是来自异次元一个美丽小森林的女巫！现在寄居在这个世界的人类家人家里。<br>
+                    这里的好吃的也太多了吧！为了吃更多肉肉，开始了打工之旅~
+                </div>
+
+            </div>
+            <img src="./intro_1.jpg" alt="" class="intro_img">
         </div>
         <div class="section">
-            <a href="../" class="go_songlist">前往歌单</a>
+            <div class="line"></div>
+            <div class="textContainer">
+                LiAN OFFICIAL
+            </div>
+            <div class="song_topic">SING<br>THE<br>SONG</div>
+            <a href="../index.html" class="go_songlist">前往歌单</a>
             <div class="slide">
                 <div class="song-wrap">
                     <div class="song-disc">
                         <div class="song-disc__bg"></div>
+                        <div class="song_text">第一首歌</div>
                         <div class="song-disc__cover">
                             <div class="song-img">
                                 <img src="./moon.jpg" alt="" class="u-img">
@@ -54,6 +106,7 @@
                 <div class="song-wrap">
                     <div class="song-disc">
                         <div class="song-disc__bg"></div>
+                        <div class="song_text">第二首歌</div>
                         <div class="song-disc__cover">
                             <div class="song-img">
                                 <img src="./moon.jpg" alt="" class="u-img">
@@ -69,6 +122,7 @@
                 <div class="song-wrap">
                     <div class="song-disc">
                         <div class="song-disc__bg"></div>
+                        <div class="song_text">第三首歌</div>
                         <div class="song-disc__cover">
                             <div class="song-img">
                                 <img src="./moon.jpg" alt="" class="u-img">
@@ -85,7 +139,10 @@
         <div class="section">Section 4</div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
         new fullpage('#fullpage', {
             // licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -111,7 +168,7 @@
             skills.forEach((skill, index) => {
                 setTimeout(() => {
                     skill.classList.add('visible');
-                }, index * 300); // 每100毫秒显示一个技能
+                }, index * 150); // 每100毫秒显示一个技能
             });
         };
         function resetSkills() {

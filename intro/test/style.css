@@ -1,0 +1,30 @@
+.container {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    font-size: 24px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #eee;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    /* 初始化位置 */
+    z-index: 1;
+}
+
+.text {
+    position: relative;
+    z-index: 2;
+    color: blue;
+    background: linear-gradient(90deg, transparent 50%, red 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
