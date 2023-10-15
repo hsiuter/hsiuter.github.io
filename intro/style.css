@@ -26,7 +26,7 @@
 }
 
 .section:nth-child(2) {
-    background-color: #181c47;
+    background-color: #54477d;
 }
 
 .section:nth-child(3) {
@@ -34,7 +34,11 @@
 }
 
 .section:nth-child(4) {
-    background-color: #e74c3c;
+    background-color: #54477d;
+}
+
+.section:nth-child(5) {
+    background-color: #392F5A;
 }
 
 
@@ -155,14 +159,14 @@
 .fp-prev {
     left: 38% !important;
     /* 默认是0 */
-    top: 52%;
+    top: 54% !important;
 }
 
 /* 调整右侧箭头的位置 */
 .fp-next {
     right: 38% !important;
     /* 默认是0 */
-    top: 52%;
+    top: 54% !important;
 }
 
 /* fp-slidesNav fp-bottom */
@@ -329,13 +333,15 @@
 
 .go_songlist {
     position: absolute;
-    top: 10px;
+    bottom: 0;
     right: 20px;
     font-size: 40px;
     color: aliceblue;
     font-weight: 400;
     z-index: 10;
     text-decoration: none;
+    font-family: PPEN;
+    letter-spacing: -.05em;
 }
 
 .song_text {
@@ -418,6 +424,7 @@ p {
 
 /* 侧边文字 */
 #textContainer {
+    color: #eee;
     position: absolute;
     font-family: PPNM;
     writing-mode: vertical-rl;
@@ -426,6 +433,7 @@ p {
     left: -100%;
     transition: left 0.3s;
     top: 1.71875vw;
+    z-index: 9999;
 }
 
 
@@ -450,11 +458,12 @@ p {
     left: 2.46875vw;
     top: -60%;
     transform: translate(-50%, -50%);
-    border: #ffffff 1px solid;
+    border-right: #ffffff 4px solid;
     width: 1px;
     height: 100%;
     transition: top 1s ease;
     /* 添加过渡效果，持续时间为2秒，可以根据需要调整 */
+    z-index: 9999;
 }
 
 /* 直线 */
@@ -498,7 +507,7 @@ p {
     font-size: 16.66667vw;
     font-family: PPEN;
     font-weight: 200;
-    color: aliceblue;
+    color: #eee;
     line-height: 1;
     letter-spacing: -.05em;
 }
@@ -513,7 +522,7 @@ p {
     font-weight: 200;
     font-size: 1.5vw;
     line-height: 1.5;
-    color: aliceblue;
+    color: #eee;
 }
 
 .about_text_1 {
@@ -521,7 +530,7 @@ p {
     font-weight: 200;
     font-size: 1.5vw;
     line-height: 1.5;
-    color: aliceblue;
+    color: #eee;
 }
 
 .about_text_2 {
@@ -530,7 +539,7 @@ p {
     font-weight: 400;
     font-size: 1vw;
     line-height: 1.5;
-    color: aliceblue;
+    color: #eee;
 }
 
 .about_text_container {
@@ -547,30 +556,103 @@ p {
     /* transform: translate(-50%, -50%); */
 }
 
-
-
 /* 介绍 */
 
-.line {
-    position: absolute;
-    left: 2.46875vw;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border: #ffffff 1px solid;
-    width: 1px;
-    height: 100%;
-    transition: top 1s ease;
-    /* 添加过渡效果，持续时间为2秒，可以根据需要调整 */
+/* 时间线 */
+.timeline__items {
+    width: 1410px !important;
+    height: 500px !important;
 }
 
-.textContainer {
+.timeline__content {
+    color: #eee !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+    border-radius: 0% !important;
+    border: #eee solid 1px !important;
+    /* padding: 5px !important; */
+    /* width: 300px; */
+
+
+}
+
+.timeline__content div {
+    font-size: 0.9rem;
+}
+
+.timeline_topic {
+    position: absolute;
+    font-size: 8vw !important;
+    font-family: PPEN;
+    font-weight: 200;
+    color: aliceblue;
+    line-height: 0.63;
+    letter-spacing: -.05em;
+    bottom: 0vw;
+    right: 0vw;
+}
+
+/* 时间线 */
+
+/* 跑马灯 */
+.footer_content {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 170px;
+    color: #eee;
+
+}
+
+.footer_a a {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 1.82292vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: .6vw;
+    letter-spacing: .8em;
+    color: #eee;
+    text-decoration: none;
+    font-family: PPNM;
+
+}
+
+.footer_textContainer {
+    color: #eee;
     position: absolute;
     font-family: PPNM;
     writing-mode: vertical-rl;
-    font-size: 24px;
+    font-size: 15px;
+    font-weight: 200;
     /* position: relative; */
-    left: 0.46875vw;
+    right: 2vw;
     top: 1.71875vw;
-    color: aliceblue;
-    font-weight: 400;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+/* 侧边文字 */
+
+/* 直线 */
+.footer_line {
+    position: absolute;
+    right: 3.46875vw;
+    top: 0%;
+    transform: translate(-50%, 0%);
+    border-right: #ffffff 4px solid;
+    width: 1px;
+    height: 60%;
+    /* 添加过渡效果，持续时间为2秒，可以根据需要调整 */
+    z-index: 9999;
+}
+
+/* 跑马灯 */
+
+.fp-watermark {
+    opacity: 0;
+    width: 0;
 }
