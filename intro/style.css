@@ -434,6 +434,7 @@ p {
     transition: left 0.3s;
     top: 1.71875vw;
     z-index: 9999;
+    font-weight: 200;
 }
 
 
@@ -525,12 +526,27 @@ p {
     color: #eee;
 }
 
+.about_text_content {
+    display: inline-block;
+    margin-right: 10px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about_text_content.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 .about_text_1 {
     font-family: 'ZCOOL QingKe HuangYou', sans-serif;
     font-weight: 200;
     font-size: 1.5vw;
     line-height: 1.5;
     color: #eee;
+    display: inline-block;
 }
 
 .about_text_2 {
@@ -540,6 +556,14 @@ p {
     font-size: 1vw;
     line-height: 1.5;
     color: #eee;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about_text_2.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about_text_container {
@@ -655,4 +679,35 @@ p {
 .fp-watermark {
     opacity: 0;
     width: 0;
+}
+
+svg {
+    fill: white;
+    width: 150px;
+    height: 150px;
+
+}
+
+.a_svg_bilibili {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.a_svg_yt {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+.a_svg_mic {
+    position: absolute;
+    top: 20%;
+    left: 45%;
+}
+
+.a_svg_web {
+    position: absolute;
+    top: 20%;
+    left: 60%;
 }
