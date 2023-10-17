@@ -832,7 +832,7 @@
                         </div>
                         <div class="play-btn"></div>
                         <div class="song-needle"></div>
-                        <audio class="song-audio" src="./2.mp3"></audio> <!-- 添加音频文件 -->
+                        <audio class="song-audio" src="./1.mp3"></audio> <!-- 添加音频文件 -->
                     </div>
                 </div>
             </div>
@@ -848,7 +848,7 @@
                         </div>
                         <div class="play-btn"></div>
                         <div class="song-needle"></div>
-                        <audio class="song-audio" src="./2.mp3"></audio> <!-- 添加音频文件 -->
+                        <audio class="song-audio" src="./1.mp3"></audio> <!-- 添加音频文件 -->
                     </div>
                 </div>
             </div>
@@ -864,7 +864,7 @@
                         </div>
                         <div class="play-btn"></div>
                         <div class="song-needle"></div>
-                        <audio class="song-audio" src="./2.mp3"></audio> <!-- 添加音频文件 -->
+                        <audio class="song-audio" src="./1.mp3"></audio> <!-- 添加音频文件 -->
                     </div>
                 </div>
             </div>
@@ -1160,6 +1160,9 @@
         function playAnimation_2() {
             aboutText2.classList.add("active");
         };
+        $(document).on('click', '#top', function () {
+            fullpage_api.moveTo('page1');
+        });
     </script>
     <script src="script.js"></script>
 </body>
