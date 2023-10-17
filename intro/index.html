@@ -832,7 +832,7 @@
                         </div>
                         <div class="play-btn"></div>
                         <div class="song-needle"></div>
-                        <audio class="song-audio" src="./1.mp3"></audio> <!-- 添加音频文件 -->
+                        <audio class="song-audio" src="./2.mp3"></audio> <!-- 添加音频文件 -->
                     </div>
                 </div>
             </div>
@@ -848,7 +848,7 @@
                         </div>
                         <div class="play-btn"></div>
                         <div class="song-needle"></div>
-                        <audio class="song-audio" src="./1.mp3"></audio> <!-- 添加音频文件 -->
+                        <audio class="song-audio" src="./2.mp3"></audio> <!-- 添加音频文件 -->
                     </div>
                 </div>
             </div>
@@ -864,7 +864,7 @@
                         </div>
                         <div class="play-btn"></div>
                         <div class="song-needle"></div>
-                        <audio class="song-audio" src="./1.mp3"></audio> <!-- 添加音频文件 -->
+                        <audio class="song-audio" src="./2.mp3"></audio> <!-- 添加音频文件 -->
                     </div>
                 </div>
             </div>
@@ -1137,7 +1137,7 @@
                     playAnimation();
                     setTimeout(function () {
                         playAnimation_2(); // 延迟一段时间后播放第二个动画
-                    }, 700); // 设置延迟时间（以毫秒为单位，这里是1秒）
+                    }, 600); // 设置延迟时间（以毫秒为单位，这里是1秒）
                 }
             },
             // onLeave: function (origin, destination, direction) {
@@ -1152,7 +1152,7 @@
             aboutTextContent.forEach((element, index) => {
                 setTimeout(() => {
                     element.classList.add("active");
-                }, index * 100); // 延迟效果以便一次一个显示
+                }, index * 150); // 延迟效果以便一次一个显示
             });
         };
         const aboutText2 = document.querySelector(".about_text_2");
@@ -1160,6 +1160,8 @@
         function playAnimation_2() {
             aboutText2.classList.add("active");
         };
+
+
         $(document).on('click', '#top', function () {
             fullpage_api.moveTo('page1');
         });
