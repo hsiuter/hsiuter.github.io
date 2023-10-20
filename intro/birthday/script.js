@@ -5,10 +5,6 @@ function flameToggle() {
     this.classList.toggle('out');
 }
 
-
-setTimeout(function () {
-    // 你的代码放这里
-}, 10000);
 var retina = window.devicePixelRatio,
 
     // Math shorthands
@@ -412,9 +408,24 @@ document.addEventListener("DOMContentLoaded", function () {
         var now = new Date();
         var timeDifference = targetDate - now;
 
+        const greeting = document.getElementById("greeting");
+        const greeting_n = document.getElementById("greeting_name");
+        const confetti = document.getElementById("confetti");
+
         if (timeDifference <= 0) {
             clearInterval(interval);
             document.getElementById("whiteScreen").style.display = "none";
+            setTimeout(() => {
+                greeting_n.style.top = "25%";
+                greeting_n.style.opacity = "1";
+            }, 1000);
+            setTimeout(() => {
+                greeting.style.opacity = "1";
+                greeting.style.top = "40%";
+            }, 1500);
+            setTimeout(() => {
+                confetti.style.opacity = "1";
+            }, 2000);
             return;
         }
 
